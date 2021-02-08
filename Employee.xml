@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean class="com.xworkz.projector.custom.Employee" id="emp1">
+<constructor-arg name="name" value="hari"/>
+<constructor-arg name="id" value="101"/>
+<constructor-arg name="age" value="34"/>
+</bean>
+<bean class="com.xworkz.projector.custom.Employee" id="emp2">
+<constructor-arg name="name" value="moni"/>
+<constructor-arg name="id" value="102"/>
+<constructor-arg name="age" value="29"/>
+</bean>
+<bean class="com.xworkz.projector.custom.Employee" id="emp3">
+<constructor-arg name="name" value="pari"/>
+<constructor-arg name="id" value="103"/>
+<constructor-arg name="age" value="27"/>
+</bean>
+
+<bean class="com.xworkz.projector.custom.EmployeeAL" id="empAL">
+<property name="empAL">
+	<list value-type="com.xworkz.projector.custom.Employee">
+		<ref bean="emp1"/>
+		<ref bean="emp2"/>
+		<ref bean="emp3"/>
+	</list>
+</property>
+</bean>
+	
+	
+	
+</beans>
