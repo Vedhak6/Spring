@@ -11,6 +11,7 @@ import com.xworkz.crop.cropenum.CropSeason;
 import com.xworkz.crop.cropenum.CropType;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
@@ -18,6 +19,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 @Entity
 @Table(name="cropentity")
 public class CropEntity {
@@ -54,6 +56,8 @@ public class CropEntity {
 		this.organic = organic;
 		this.life = life;
 	}
+	
+	
 	
 	
 	
